@@ -1,14 +1,18 @@
-from typing import List
-import datetime.datetime
+from datetime import datetime
+
+class Location:
+  def __init__(self, lat, lon):
+    self.lat = lat
+    self.lon = lon
 
 class DataPoint:
-  def __init__(self, lat: float, lon: float, heat: float):
+  def __init__(self, lat, lon, heat):
     self.lat = lat
     self.lon = lon
     self.heat = heat
 
 class WorldSnapshot:
-  def __init__(self, dataPoints: List[DataPoint]):
+  def __init__(self, dataPoints):
     self.dataPoints = dataPoints
 
   def getDataPoints(self):
